@@ -1,0 +1,88 @@
+<div data-role="page" id="user">
+        <div data-theme="a" data-role="header">
+            <h3>
+            </h3>
+        </div><!-- /header -->
+        <div data-role="content" class="jqm-content">
+        	<ul id="mainMenu" data-role="listview" data-inset="true" data-theme="a" data-dividertheme="a">
+        		<li id="eventListButton"><a href="#">eventList</a><span class="ui-li-count" id="eventCount"></span></li>
+        		<li id="tagwallButton"><a href="#">tagwall</a><span class="ui-li-count" id="tagwallCount"></span></li>
+			</ul>
+			<ul id="settings" data-role="listview" data-inset="true" data-theme="a" data-dividertheme="a">
+				<li id="settings"><a href="#">Settings</a></li>
+			</ul>
+		</div>
+	<div data-role="footer" data-position="fixed">
+    
+	   
+    
+    </div><!-- /jqm-footer -->
+	<script>
+		$('#eventCount').html(sessionStorage.eventCount);
+		$('#tagwallCount').html(sessionStorage.tagwallCount);
+	</script>
+</div><!-- /page -->
+<script>						
+			// INIT GLOBAL
+			/*		
+			$.ajax({
+				url: 'http://bandplan.dk/ios/fetchData.php?action=init&bandId=1',
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				async: false,
+				timeout: 5000,
+				success: function(data, status){
+					 $('#countEvents').html(data.eventCounts);
+					 $('#countPosts').html(data.tagwallCounts);
+					 $('.jqm-header').find("h1").html(data.bandname);
+					 
+				},
+				error: function(){
+					$('#init').text('There was an error loading the data.');
+				}
+			});
+			
+			$.ajax({
+				url: 'http://bandplan.dk/ios/fetchData.php?action=eventList&bandId=1',
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				timeout: 5000,
+				success: function(data, status){
+					$.each(data, function(i,item){
+						var data = '<li><a href="">'+item.playPlace+' @ '+item.playDate+'</a></li>';
+						$('#events').append(data);
+					});
+				},
+				error: function(){
+					$('#events').text('There was an error loading the data.');
+				}
+			});
+			
+			$.ajax({
+				url: 'http://bandplan.dk/ios/fetchData.php?action=tagwall&bandId=1',
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				timeout: 5000,
+				success: function(data, status){
+					$.each(data, function(i,item){
+						var data = '<li><a href="">'+item.headline+' af '+item.userId+'</a></li>';
+						$('#tagwall').append(data);
+					});
+				},
+				error: function(){
+					$('#tagwall').text('There was an error loading the data.');
+				}
+			});
+			
+			//save a value
+			//sessionStorage.name = "Nicholas";
+
+			//retrieve item
+			//var name = sessionStorage.name;
+
+//remove the key
+//delete sessionStorage.name;
+		*/	
+	
+		
+</script>

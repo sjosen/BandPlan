@@ -1,0 +1,15 @@
+body {
+	opacity: 0;
+}
+.ui-mobile {
+	background-color: #000;
+}
+.errorsField{
+	border:solid 1px #ffc73d;
+	outline:none;
+}
+.tagwallAuthor {
+	font-size: .8em;
+	margin-left: 20px;
+	font-style: italic;
+}

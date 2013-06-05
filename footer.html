@@ -1,0 +1,12 @@
+<div data-role="navbar">
+	<ul>
+		<li><a href="a.html">One</a></li>
+		<li id="logoutButton"><a href="#">Logout</a></li>
+	</ul>
+</div><!-- /navbar -->
+<script>
+	$('#logoutButton').click(function() {
+		sessionStorage.clear();
+		$.mobile.changePage( "index.html", { transition: "fade", changeHash: false} );
+	});
+</script>
